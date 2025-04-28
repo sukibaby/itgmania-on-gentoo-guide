@@ -1,7 +1,7 @@
 # Gentoo-based ITGmania PC
 This is a guide anyone can follow along to, you just get the Gentoo installer going on your machine and basically copy paste these commands in until ITGmania appears on the screen. You don't really even need Linux knowledge here.
 
-If you have AMD graphics, you can just copy paste the commands and use the files here as is. If you have nVidia or Intel graphics, you have to change one line in make.conf.
+Following this guide will give you the absolute bare minimum needed to run ITGmania, but lets you choose what to do with the system after that; whereas [dins' image](https://docs.google.com/document/d/1_lO2ddaYogve08u7CsjC6OojXy36ZfGgo7VCRVkLJhU/edit?tab=t.0#heading=h.f4jo4mmoacz4) is a designed to be a fast & easy way to get a working setup without any user input, but does not allow customization of the system.
 
 Gentoo is a great choice for a dedicated ITGmania PC, because the game really benefits significantly from the OS level features being built to your specific PC, especially if your PC or graphics card is old or is low on memory. From the moment you push the power button, until you are in the game, is extremely fast, under 10 seconds, even on a 15 year old office PC (assuming SSD/non-totally-ancient graphics card).
 
@@ -22,7 +22,7 @@ If you're going to install to a machine that doesn't have internet, or is WiFi o
 I've provided all the config files you need to change in the files section above. You can reference them or use them directly. The `itgmania.desktop` files are optional.
 
 ### In the installer, make sure internet is working
-Once you have the installer running, you'll be on a text prompt where it'll tell you to set your password and start SSH if you want. Set the password with `passwd root`. This password is just for while you're in the installer.
+Once you have the installer running, you'll be on a text prompt where it'll tell you to set your password and start SSH if you want. Set the password with `passwd root`. This password is just for while you're in the installer. Note Linux doesn't show feedback as you're typing a password. Just type and hit enter.
 
 If you'd like to continue this from another computer,  enable SSH by typing `/etc/init.d/sshd start` and then note the IP address of your computer by typing `ip addr`.  Look for a line like this:
 ```
@@ -319,7 +319,7 @@ Found linux image: /boot/vmlinuz-6.6.21-gentoo
 Found initrd image: /boot/initramfs-genkernel-amd64-6.6.21-gentoo
 done
 ```
-Add a user account. For example this would make a user account with the name max300. Note Linux doesn't show feedback as you're typing a password. Just type and hit enter.
+Add a user account. For example this would make a user account with the name max300.
 ```
 # useradd -m -G users,wheel,usb -s /bin/bash max300
 # passwd max300
@@ -336,7 +336,9 @@ Remove the USB stick once it reboots. It should boot quickly into the new Gentoo
 
 ### After rebooting
 
-At this point you should be logged back into your Gentoo install!  Nice work.
+At this point you should be back in your Gentoo install!  Nice work.
+
+Log in as root.
 
 Run these commands to get systemd set up. You may have to answer a few questions.
 ```
@@ -422,6 +424,8 @@ AutomaticLogin=(YOUR USERNAME HERE)
 ### Installing ITGmania
 
 We're almost there!!!
+Unlike earlier, you don't want to be in the root account for this.
+Connect with SSH as the normal user, or open up a terminal on the ITG PC itself.
 
 Clone ITGmania from the GitHub page.
 ```
@@ -437,7 +441,7 @@ git submodule update --init --recursive
 cmake -B build
 cmake --build build
 ```
-Everything should have finished successfully without any error messages. Try to run the game.
+Everything should have finished successfully without any error messages. Try to run the game (you do have to do this step from the ITG PC itself).
 ```
 ./itgmania
 ```
@@ -445,10 +449,8 @@ The game should start up. Congratulations on making it this far.
 
 ### Automatically login and start ITGmania
 Make a folder called autostart in your user directory.
-unlike earlier, you don't want to be in the root account for this.
-Connect with ssh as the normal user,  or open up a terminal on the ITG PC itself, and then run:
 ```
-mkdir ~/.config/autostart`
+mkdir ~/.config/autostart
 ```
 Now make a file to autostart itgmania:
 ```
