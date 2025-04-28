@@ -1,0 +1,3 @@
+UUID=(UUID of partition 3 goes here)  /  xfs    defaults      0  0
+UUID=(UUID of partition 1 goes here)                             /efi  vfat   defaults      0  2
+UUID=(UUID of partition 2 goes here)  swap           swap   defaults      0  0
