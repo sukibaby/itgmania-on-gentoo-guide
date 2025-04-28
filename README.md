@@ -8,10 +8,12 @@ Gentoo is a great choice for a dedicated ITGmania PC, because the game really be
 A common concern with Gentoo is that compiling stuff takes a long time. True, you can expect to wait a while for GNOME to compile. Especially if this is an older PC, like mine, that will take maybe even 12 hours.  But once it's done, you never have to do it again.
 
 ![Screenshot_from_2025-04-28_03-45-21](https://github.com/user-attachments/assets/61414c7b-d5e7-465c-8c25-4dc58b8f0ae6)
-*I can actually get 180Hz 1080p with this setup :D*
+<sup><sub>I can actually get 180Hz 1080p with this setup :D</sub></sup>
 
 This guide will set you up to automatically sign in and launch the game, as one would want for an arcade setup (or behavior like [dins' image](https://docs.google.com/document/d/1_lO2ddaYogve08u7CsjC6OojXy36ZfGgo7VCRVkLJhU/edit?tab=t.0#heading=h.f4jo4mmoacz4)). Following this guide will also install a minimal version of GNOME. You will also have SSH/SFTP login to this PC.
 
+
+### Table of Contents
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [Getting started](#getting-started)
