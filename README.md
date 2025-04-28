@@ -12,6 +12,23 @@ A common concern with Gentoo is that compiling stuff takes a long time. True, yo
 
 This guide will set you up to automatically sign in and launch the game, as one would want for an arcade setup (or behavior like [dins' image](https://docs.google.com/document/d/1_lO2ddaYogve08u7CsjC6OojXy36ZfGgo7VCRVkLJhU/edit?tab=t.0#heading=h.f4jo4mmoacz4)). Following this guide will also install a minimal version of GNOME. You will also have SSH/SFTP login to this PC.
 
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Getting started](#getting-started)
+- [In the installer, make sure internet is working](#in-the-installer-make-sure-internet-is-working)
+- [Preparing the drive](#preparing-the-drive)
+- [After rebooting](#after-rebooting)
+- [(OPTIONAL) Set up autologin](#optional-set-up-autologin)
+- [Installing ITGmania](#installing-itgmania)
+- [Automatically login and start ITGmania](#automatically-login-and-start-itgmania)
+- [How to update the game in the future](#how-to-update-the-game-in-the-future)
+- [(OPTIONAL) Install a web browser](#optional-install-a-web-browser)
+- [(OPTIONAL) Give the normal user permission to shut down via command line](#optional-give-the-normal-user-permission-to-shut-down-via-command-line)
+- [(OPTIONAL) Enable desktop icons](#optional-enable-desktop-icons)
+- [(OPTIONAL) Install or Update Simply Love Zmod](#optional-install-or-update-simply-love-zmod)
+
+<!-- TOC end -->
+
 ## Getting started
 Before getting started, it will make your life MUCH easier if the ITGmania PC is hooked up to Ethernet. NetworkManager is optional; you don't need it if you won't be using WiFi. I'll mention when you need to install NetworkManager if you want to install that.
 
