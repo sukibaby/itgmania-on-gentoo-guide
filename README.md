@@ -17,7 +17,6 @@ This guide will set you up to automatically sign in and launch the game, as one 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [Getting started](#getting-started)
-- [In the installer, make sure internet is working](#in-the-installer-make-sure-internet-is-working)
 - [Preparing the drive](#preparing-the-drive)
 - [After rebooting](#after-rebooting)
 - [(OPTIONAL) Set up autologin](#optional-set-up-autologin)
