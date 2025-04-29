@@ -465,7 +465,7 @@ Everything should have finished successfully without any error messages. Try to 
 ```
 The game should start up. Congratulations on making it this far.
 
-There is one step left to do though. We need to switch from Wayland to Xorg. You may have noticed the keyboard doesn't work, this will fix it. Close out of ITGmania and log out using the menu in the upper right corner (with the power button). At the login screen, click your username. Click the gear that appears in the bottom right corner. Select "GNOME on Xorg". Log back in.
+There is one step left to do though. We need to switch from Wayland to Xorg. You may have noticed the keyboard doesn't work, this will fix it. Close out of ITGmania and log out using the menu in the upper right corner (with the power button). At the login screen, click your username. Click the gear that appears in the bottom right corner. Select "**GNOME on Xorg**". Log back in. This will make GNOME on Xorg the default going forward, so you only have to do this once.
 
 ### Automatically login and start ITGmania
 Make a folder called autostart in your user directory.
