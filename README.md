@@ -12,6 +12,18 @@ I have this running very smoothly on an AMD A8-7600B with 8GB of PC3-10600 with 
 
 ------------------
 
+## Note about `emerge`
+
+At some point, it is likely that you will be unable to install packages until you update your configuration files. When this happens, simply run
+
+`sudo etc-update`
+
+and you should get asked if you want to apply the update.
+
+Generally you should respond `-3` (yes with the dash) and hit enter.  After that you will get a `mv` (file move) prompt you have to answer `y` to. Then it should tell you that you're all set.
+
+------------------
+
 ## Install Guide
 
 The Gentoo Handbook for AMD64 (64-bit CPU's) can be generally followed for the initial setup of the system: https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/About
