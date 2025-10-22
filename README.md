@@ -6,7 +6,7 @@ Fortunately, these changes make setting up a 3D-accelerated system with X11 far 
 
 This guide will set you up to have a Gentoo install for a dedicated ITGmania PC. It also has a few important files like the `make.conf` already set up how you will need it.
 
-Gentoo is a great option for a dedicated ITGmania PC, especially when running on older hardware, because in these cases any little improvement in game performance is very welcome, and the high optimization of Gentoo can make a difference.
+Gentoo is a great option for a dedicated ITGmania PC, especially when running on older hardware, because in these cases any little improvement in game performance is very welcome, and the high optimization of Gentoo can make a difference. Some older but still-usable hardware (like pre-Ryzen AMD APU's) also have non-standard instruction sets which can further boost performance, but will only be taken advantage of with both the kernel and game being custom built, which is easiest done in a Gentoo setup.
 
 ------------------
 
