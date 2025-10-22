@@ -67,7 +67,25 @@ sudo nano /etc/portage/package.use/00video
 - nVidia (official): `*/* VIDEO_CARDS: -* nvidia`
 - nVidia (open source): `*/* VIDEO_CARDS: -* nouveau`
 
-Paste the appropriate line, and close and save the `00video` file. You can now clone ITGmania and build it.
+Paste the appropriate line, and close and save the `00video` file. 
+
+-------
+
+## Kernel optimization
+
+A lot of performance can be gained by optimizing the kernel for low latency.
+
+First run `eselect kernel list` to ensure the latest `-dist` kernel is selected and activated.  If not, run `eselect kernel set #` with the number of the desired kernel.
+
+Then go to the kernel directory with `cd /usr/src/linux`. Once you are here, type `make menuconfig` (may need to run as sudo) to configure the kernel further.
+
+First, go into `Processor type and features -->` and look for `Timer frequency`. Raise it from 300hz to 1000hz.
+
+Under `Power management and ACPI options -->`, look for `CPU Frequency Scaling`. Inside there, set the `Default CPUFreq governor` to `performance`.
+
+--------
+
+You can now clone ITGmania and build it.
 
 ```
 git clone https://github.com/itgmania/itgmania
@@ -77,9 +95,9 @@ cmake -B build -DWITH_FFMPEG_JOBS="$(nproc)"
 cmake --build build --parallel "$(nproc)"
 ```
 
-At this point you have ITGmania built and ready to use! :-)
+You can start the game by typing `./itgmania &`.
 
----
+-----------
 
 ## Automatic login (optional)
 
