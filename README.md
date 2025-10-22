@@ -1,3 +1,5 @@
+## Preface
+
 This guide was updated in October 2025, following some restructuring within Gentoo.
 
 Fortunately, these changes are very beneficial for users looking to set up a system with the basics needed to run 3D-accelerated X11.
@@ -9,6 +11,8 @@ Gentoo is a great option for a dedicated ITGmania PC, especially when running on
 I have this running very smoothly on an AMD A8-7600B with 8GB of PC3-10600 with its internal graphics at 1080p :)
 
 ------------------
+
+## Install Guide
 
 The Gentoo Handbook for AMD64 (64-bit CPU's) can be generally followed for the initial setup of the system: https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/About
 
