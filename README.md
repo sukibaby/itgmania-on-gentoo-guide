@@ -51,7 +51,8 @@ sudo emerge --ask x11-base/xorg-server x11-apps/xinit x11-terms/xterm dev-vcs/gi
 Additionally, you'll need drivers for your GPU, so be sure to emerge this as well:
 
 - Intel: `x11-drivers/xf86-video-intel`
-- AMD: `x11-drivers/xf86-video-amdgpu`
+- AMD (modern): `x11-drivers/xf86-video-amdgpu`
+- AMD (legacy): `x11-drivers/xf86-video-ati`
 - NVIDIA (open): `x11-drivers/nouveau`
 - NVIDIA (proprietary): `x11-drivers/nvidia-drivers`
 
