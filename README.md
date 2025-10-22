@@ -8,7 +8,7 @@ This guide will set you up to have a Gentoo install for a dedicated ITGmania PC.
 
 Gentoo is a great option for a dedicated ITGmania PC, especially when running on older hardware, because in these cases any little improvement in game performance is very welcome, and the high optimization of Gentoo can really make a difference.
 
-I have this running very smoothly on an AMD A8-7600B with 8GB of PC3-10600 with its internal graphics at 1080p :)
+For example, on an AMD A8-7600B running in exclusive fullscreen, it could achieve 95FPS at 1080p in Gentoo, whereas in Windows 11 this same setup with official AMD drivers could only achieve 75FPS on OpenGL.
 
 ------------------
 
