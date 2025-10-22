@@ -115,3 +115,10 @@ if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
 fi
 ```
 
+------------
+
+## Troubleshooting
+
+If you have low FPS, ensure you have 3D acceleration supported and your GPU is properly configured.
+
+https://wiki.gentoo.org/wiki/Xorg/Hardware_3D_acceleration_guide
