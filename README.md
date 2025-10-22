@@ -83,6 +83,8 @@ First, go into `Processor type and features -->` and look for `Timer frequency`.
 
 Under `Power management and ACPI options -->`, look for `CPU Frequency Scaling`. Inside there, set the `Default CPUFreq governor` to `performance`.
 
+Finally, rebuild the kernel with `sudo emerge --ask sys-kernel/gentoo-kernel` and ensure grub is up to date with `grub-mkconfig -o /boot/grub/grub.cfg`.
+
 --------
 
 You can now clone ITGmania and build it.
