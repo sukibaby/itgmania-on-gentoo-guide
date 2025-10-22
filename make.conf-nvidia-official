@@ -1,0 +1,32 @@
+# Compiler Flags
+COMMON_FLAGS="-O2 -march=bdver3 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+RUSTFLAGS="${RUSTFLAGS} -C target-cpu=native"
+
+# Hardware Support
+VIDEO_CARDS="nvidia"
+
+GRUB_PLATFORMS="emu efi-64 pc"
+INPUT_DEVICES="evdev libinput"
+
+# Localization
+LC_MESSAGES=C.UTF-8
+
+# Licensing
+ACCEPT_LICENSE="*"
+
+# USE Flags
+USE="
+  alsa dracut ffmpeg flac gnome grub gtk initramfs jpeg matroska modules-sign
+  mp3 mpeg ogg opus png systemd uefi X opengl udev xinerama xrandr lzma
+  vulkan vaapi llvm dri3 egl gallium x265 jpeg png
+  -kde -gnome
+"
+
+# Optional: Kernel Module Signing
+#MODULES_SIGN_KEY="/path/to/kernel_key.pem"
+#MODULES_SIGN_CERT="/path/to/kernel_key.pem"
+#MODULES_SIGN_HASH="sha512"
