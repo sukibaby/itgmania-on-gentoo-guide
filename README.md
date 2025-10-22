@@ -2,7 +2,7 @@
 
 This guide was updated in October 2025, following some restructuring within Gentoo.
 
-Fortunately, these changes are very beneficial for users looking to set up a system with the basics needed to run 3D-accelerated X11.
+Fortunately, these changes are very beneficial for users looking to set up a system with the basics needed to run 3D-accelerated X11, as it's now much less of a pain to do so.
 
 This guide will set you up to have a Gentoo install for a dedicated ITGmania PC. It also has a few important files like the `make.conf` already set up how you will need it.
 
