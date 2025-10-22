@@ -56,7 +56,20 @@ Additionally, you'll need drivers for your GPU, so be sure to emerge this as wel
 - NVIDIA (open): `x11-drivers/nouveau`
 - NVIDIA (proprietary): `x11-drivers/nvidia-drivers`
 
-You can then clone ITGmania and build it.
+At this point, you should additionally define your video card to portage:
+
+```
+sudo nano /etc/portage/package.use/00video
+```
+
+- Intel (modern): `*/* VIDEO_CARDS: -* intel`
+- Intel (legacy): `*/* VIDEO_CARDS: -* intel i915`
+- AMD (modern): `*/* VIDEO_CARDS: -* amdgpu`
+- AMD (legacy): `*/* VIDEO_CARDS: -* radeon radeonsi`
+- nVidia (official): `*/* VIDEO_CARDS: -* nvidia`
+- nVidia (open source): `*/* VIDEO_CARDS: -* nouveau`
+
+Paste the appropriate line, and close and save the `00video` file. You can now clone ITGmania and build it.
 
 ```
 git clone https://github.com/itgmania/itgmania
