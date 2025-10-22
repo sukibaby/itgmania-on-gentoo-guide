@@ -104,7 +104,9 @@ Finally, rebuild the kernel with `sudo emerge --ask sys-kernel/gentoo-kernel` an
 
 ## Automatic login (optional)
 
-Once this is done, you can create a `.xinitrc` file in the user home directory containing a command to run ITGmania:
+There are many ways to achieve this goal. The example here is a very minimalistic one which uses features built into systemd to do the job, but you could also use a login manager (gdm, lightdm, etc) to do this.
+
+Create a `.xinitrc` file in the user home directory containing a command to run ITGmania:
 
 ```
 echo exec /home/[your username]/itgmania/itgmania
