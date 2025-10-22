@@ -69,9 +69,24 @@ sudo nano /etc/portage/package.use/00video
 
 Paste the appropriate line, and close and save the `00video` file. 
 
--------
+---------
 
-## Kernel optimization
+## Building ITGmania
+
+```
+cd ~
+git clone https://github.com/itgmania/itgmania
+cd itgmania
+git submodule update --init --recursive
+cmake -B build -DWITH_FFMPEG_JOBS="$(nproc)"
+cmake --build build --parallel "$(nproc)"
+```
+
+You can start the game by typing `./itgmania &`.
+
+-----------
+
+## Low Latency Kernel optimization (optional)
 
 A lot of performance can be gained by optimizing the kernel for low latency.
 
@@ -86,21 +101,6 @@ Under `Power management and ACPI options -->`, look for `CPU Frequency Scaling`.
 Finally, rebuild the kernel with `sudo emerge --ask sys-kernel/gentoo-kernel` and ensure grub is up to date with `grub-mkconfig -o /boot/grub/grub.cfg`.
 
 --------
-
-You can now clone ITGmania and build it.
-
-```
-cd ~
-git clone https://github.com/itgmania/itgmania
-cd itgmania
-git submodule update --init --recursive
-cmake -B build -DWITH_FFMPEG_JOBS="$(nproc)"
-cmake --build build --parallel "$(nproc)"
-```
-
-You can start the game by typing `./itgmania &`.
-
------------
 
 ## Automatic login (optional)
 
