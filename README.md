@@ -90,6 +90,7 @@ Finally, rebuild the kernel with `sudo emerge --ask sys-kernel/gentoo-kernel` an
 You can now clone ITGmania and build it.
 
 ```
+cd ~
 git clone https://github.com/itgmania/itgmania
 cd itgmania
 git submodule update --init --recursive
