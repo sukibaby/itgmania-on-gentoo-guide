@@ -26,7 +26,7 @@ When you get to the step where you install the **stage file** on page 5, be sure
 
 Be sure you have the correct `make.conf` from this repository copied over, and named `make.conf` (not `make.conf-amd` or whatever) and continue to follow the guide.
 
-When you get to page 7 ("*Configuring the Linux Kernel*"), follow the step to install Linux Firmware, and then skip to "3.1.3 Installing a distribution kernel". Install `gentoo-kernel`, NOT `gentoo-kernel-bin`. After this step, skip directly to page 8, and continue through the end of the guide.
+When you get to page 7 ("*Configuring the Linux Kernel*"), follow the step to install Linux Firmware, and then skip to "3.1.3 Installing a distribution kernel". Install `gentoo-kernel`, NOT `gentoo-kernel-bin`. After this step, emerge `gentoo-sources` as well, and then skip directly to page 8. From there, continue through the end of the guide.
 
 I recommend setting up the GRUB bootloader since it's the least hassle to set up. Don't forget to add a user, install sudo, add your user with visudo, and disable root login before rebooting into your system. 
 
