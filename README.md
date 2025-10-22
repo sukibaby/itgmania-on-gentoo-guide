@@ -20,7 +20,7 @@ At some point, it is likely that you will be unable to install packages until yo
 
 and you should get asked if you want to apply the update.
 
-Generally you should respond `-3` (yes with the dash) and hit enter.  After that you will get a `mv` (file move) prompt you have to answer `y` to. Then it should tell you that you're all set.
+Generally you should respond `-3` (with the dash) and hit enter.  After that you will get a `mv` (file move) prompt you have to answer `y` to. Then it should tell you that you're all set.
 
 ------------------
 
