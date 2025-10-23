@@ -92,13 +92,23 @@ A lot of performance can be gained by optimizing the kernel for low latency.
 
 First run `eselect kernel list` to ensure the latest `-dist` kernel is selected and activated.  If not, run `eselect kernel set #` with the number of the desired kernel.
 
-Then go to the kernel directory with `cd /usr/src/linux`. Once you are here, type `make menuconfig` (may need to run as sudo) to configure the kernel further.
+Use nano or any other editor to make the file `/etc/kernel/config.d/30-cpufreq.config` and save it with these contents:
 
-First, go into `Processor type and features -->` and look for `Timer frequency`. Raise it from 300hz to 1000hz.
+```
+CONFIG_CPU_FREQ=y
+CONFIG_CPU_FREQ_GOV_PERFORMANCE=y
+CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE=y
+```
 
-Under `Power management and ACPI options -->`, look for `CPU Frequency Scaling`. Inside there, set the `Default CPUFreq governor` to `performance`.
+Now make another file called `/etc/kernel/config.d/50-misc.config` and save it with these contents:
 
-Finally, rebuild the kernel with `sudo emerge --ask sys-kernel/gentoo-kernel` and ensure grub is up to date with `grub-mkconfig -o /boot/grub/grub.cfg`.
+```
+CONFIG_HZ_1000=y
+CONFIG_HZ=1000
+CONFIG_PREEMPT=y
+```
+
+Finally, rebuild the kernel with `sudo emerge --ask sys-kernel/gentoo-kernel`. You should see near the start of the kernel build that your frequency and 1000hz overrides are applied. Afterwards, ensure grub is up to date by running `grub-mkconfig -o /boot/grub/grub.cfg`.
 
 --------
 
