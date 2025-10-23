@@ -92,13 +92,22 @@ A lot of performance can be gained by optimizing the kernel for low latency.
 
 First run `eselect kernel list` to ensure the latest `-dist` kernel is selected and activated.  If not, run `eselect kernel set #` with the number of the desired kernel.
 
-Use nano or any other editor to make the file `/etc/kernel/config.d/30-cpufreq.config` and save it with these contents:
+Use nano or any other editor to make the file `/etc/systemd/system/set-cpufreq.service` and save it with these contents:
 
 ```
-CONFIG_CPU_FREQ=y
-CONFIG_CPU_FREQ_GOV_PERFORMANCE=y
-CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE=y
+[Unit]
+Description=Set CPU governor to performance
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'for cpu in /sys/devices/system/cpu/cpu[0-9]*; do echo performance > $cpu/cpufreq/scaling_governor; done'
+
+[Install]
+WantedBy=multi-user.target
 ```
+
+and then run `sudo systemctl enable set-cpufreq.service`.
 
 Now make another file called `/etc/kernel/config.d/50-misc.config` and save it with these contents:
 
