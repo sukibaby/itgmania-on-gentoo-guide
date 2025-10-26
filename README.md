@@ -12,7 +12,7 @@ Gentoo is a great option for a dedicated ITGmania PC, especially when running on
 
 ## Note about `emerge`
 
-At some point, it is likely that you will be unable to install packages until you update your configuration files. When this happens, simply run
+At some point, it is likely that you will be unable to install packages until you update your configuration files (you'll see someting like `Use --autounmask-write to write changes to config files `). When this happens, simply run
 
 `sudo etc-update`
 
