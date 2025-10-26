@@ -38,7 +38,13 @@ When you get to page 7 ("*Configuring the Linux Kernel*"), follow the step to in
 
 I recommend setting up the GRUB bootloader since it's the least hassle to set up. Don't forget to add a user, install sudo, add your user with visudo, and disable root login before rebooting into your system. 
 
-After rebooting, sign in either on the machine or by SSH and install the following packages.
+Before rebooting, make sure you have an `initramfs` file in your `/boot` directory. If you don't, you will have to run `emerge --ask --newuse --changed-use sys-kernel/gentoo-kernel`. Afterwards be sure to update the grub configuration with `grub-mkconfig -o /boot/grub/grub.cfg`.
+
+-----------
+
+## After rebooting
+
+Sign in either on the machine or by SSH and install the following packages.
 
 ```
 sudo emerge --ask x11-base/xorg-server x11-apps/xinit x11-terms/xterm dev-vcs/git dev-build/cmake media-libs/alsa-lib media-libs/glew media-libs/mesa media-libs/libglvnd dev-libs/libusb dev-lang/nasm media-libs/libpulse x11-libs/gtk+ media-sound/alsa-utils
