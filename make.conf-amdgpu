@@ -1,5 +1,5 @@
 # Compiler Flags
-COMMON_FLAGS="-O2 -march=bdver3 -pipe"
+COMMON_FLAGS="-O2 -march=native -pipe"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
 FCFLAGS="${COMMON_FLAGS}"
